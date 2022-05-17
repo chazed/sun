@@ -1,0 +1,97 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a href="#" class="logo"><span>S</span>un<span>W</span>ay <span>T</span>ra<span>V</span>el</a>
+    <div class="container">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Accueil</a>
+                    </li>
+
+                    <!--  <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            nos services
+                        </a>
+
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">offre famille</a></li>
+                            <li><a class="dropdown-item" href="#">offre groupe</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/voyagecarte">voyage à la carte</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallerie">gallerie</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Qui somme nous">qui sommes nous?</a>
+                    </li>
+                    <% if(isUser) { %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/tombola">tombola</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/reser"> Reservation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/tombola">Messagerie</a>
+                        </li>
+                        <%}%>-->
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ajouterOffre">ajouter offre</a>
+                    </li>
+
+
+                </ul>
+
+
+                <li class="nav-item">
+                    <i class="fas fa-search" id="search-btn"></i>
+                </li>
+
+
+
+                <% if(!isUser && !isAgence) { %>
+                    <li class="nav-item">
+                        <i class="fas fa-user" id="login-btn"><a href="/login">se connecter</a></i>
+                    </li>
+
+                    <li class="nav-item" id="register-btn">
+                        <i class="fas fa-user-plus" id="register-btn"><a href="/register">s'inscrire</a></i>
+                    </li>
+                    <%}%>
+
+
+
+
+                        <form action="/logout" method="POST">
+                            <input type="submit" value="diconnecter" class="btn-logout">
+                        </form>
+
+
+            </div>
+        </div>
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+
+</nav>

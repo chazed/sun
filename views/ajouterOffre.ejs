@@ -1,0 +1,25 @@
+<%- include('parts/header')%>
+    <%- include('parts/navbar')%>
+
+        <div class="container text-center">
+            <h3>Ajouter Offre</h3>
+            <form action="/Agence/ajouter" method="POST">
+                <input type="text" class="" form-control" name="nom" placeholder="name">
+                <% let nameError=validationErrors.find(err=> err.param ==='name') %>
+                    <% if (nameError) {%>
+                        <p class="alert alert-danger">
+                            <%= nameError.msg%>
+                        </p>
+                        <%}%>
+
+                            <input type="number" class="form-control" name="prix" placeholder="prix">
+                            <% let prixError=validationErrors.find(err=> err.param ==='prix') %>
+                                <% if (prixError) {%>
+                                    <p class="alert alert-danger">
+                                        <%= prixError.msg%>
+                                    </p>
+                                    <%}%>
+
+
+            </form>
+        </div>
